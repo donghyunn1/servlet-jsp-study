@@ -58,4 +58,14 @@
         <servlet-name>counterServlet</servlet-name>
         <url-pattern>/counter</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>nowServlet</servlet-name>
+        <servlet-class>com.nhnacademy.hello.NowServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>nowServlet</servlet-name>
+        <url-pattern>/now</url-pattern>
+    </servlet-mapping>
 </web-app>
