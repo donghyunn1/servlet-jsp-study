@@ -13,11 +13,13 @@ import java.time.format.DateTimeFormatter;
 import java.util.logging.Logger;
 
 public class NowServlet extends HttpServlet {
-    private static Logger log = Logger.getLogger(NowServlet.class.getName());
-
+    private static final Logger log = Logger.getLogger(NowServlet.class.getName());
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp){
+
+        CounterUtils.increaseCounter(getServletContext());
+
         resp.setCharacterEncoding("UTF-8");
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
@@ -33,6 +35,7 @@ public class NowServlet extends HttpServlet {
             writer.println("<body>");
             writer.println("<h1>현재 시간</h1>");
             writer.println("<h1>"+nowDateTimeString+"</h1>");
+            writer.println("<h1> counter : " + getServletContext().getAttribute("counter") + "<h1>");
             writer.println("</body>");
             writer.println("</html>");
         } catch (IOException e) {
@@ -45,4 +48,6 @@ public class NowServlet extends HttpServlet {
         log.info("before init!");
         super.init(config);
     }
+
 }
+
