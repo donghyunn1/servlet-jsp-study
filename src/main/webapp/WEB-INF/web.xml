@@ -68,4 +68,9 @@
         <servlet-name>nowServlet</servlet-name>
         <url-pattern>/now</url-pattern>
     </servlet-mapping>
+
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>https://nhnacademy.com/</param-value>
+    </context-param>
 </web-app>
