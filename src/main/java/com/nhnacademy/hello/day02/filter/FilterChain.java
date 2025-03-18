@@ -1,4 +1,8 @@
-package com.nhnacademy.hello.day02;
+package com.nhnacademy.hello.day02.filter;
+
+import com.nhnacademy.hello.day02.AdminPageResponse;
+import com.nhnacademy.hello.day02.MyPageResponse;
+import com.nhnacademy.hello.day02.Request;
 
 import java.util.Iterator;
 import java.util.LinkedList;

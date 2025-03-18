@@ -1,8 +1,11 @@
-package com.nhnacademy.hello.day02;
+package com.nhnacademy.hello.day02.filter;
+
+import com.nhnacademy.hello.day02.Member;
+import com.nhnacademy.hello.day02.Request;
 
 import java.util.Objects;
 
-public class AdminFilter implements Filter {
+public class AdminPageFilter implements Filter {
 
     @Override
     public void doFilter(Request request, FilterChain filterChain) {

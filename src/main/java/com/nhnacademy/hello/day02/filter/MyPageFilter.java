@@ -1,9 +1,12 @@
-package com.nhnacademy.hello.day02;
+package com.nhnacademy.hello.day02.filter;
+
+import com.nhnacademy.hello.day02.Member;
+import com.nhnacademy.hello.day02.Request;
 
 public class MyPageFilter implements Filter {
 
     @Override
-    public void doFilter(Request request,FilterChain filterChain) {
+    public void doFilter(Request request, FilterChain filterChain) {
         if(request.getPath().equals("/mypage")){
             Member member = (Member) request.get("member");
             if(member.hasRole(Member.Role.USER)){
