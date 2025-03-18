@@ -1,6 +1,6 @@
-package com.nhnacademy.hello.login;
+package com.nhnacademy.hello.day01.login;
 
-import com.nhnacademy.hello.cookie.CookieUtils;
+import com.nhnacademy.hello.day01.cookie.CookieUtils;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 

@@ -1,4 +1,4 @@
-package com.nhnacademy.hello;
+package com.nhnacademy.hello.day01;
 
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;

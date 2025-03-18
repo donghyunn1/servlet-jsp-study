@@ -1,4 +1,4 @@
-package com.nhnacademy.hello.cookie;
+package com.nhnacademy.hello.day01.cookie;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;

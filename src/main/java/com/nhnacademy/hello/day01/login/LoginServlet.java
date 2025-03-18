@@ -1,4 +1,4 @@
-package com.nhnacademy.hello.login;
+package com.nhnacademy.hello.day01.login;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletConfig;

@@ -1,4 +1,4 @@
-package com.nhnacademy.hello;
+package com.nhnacademy.hello.day01;
 
 import java.io.*;
 import java.util.Objects;
