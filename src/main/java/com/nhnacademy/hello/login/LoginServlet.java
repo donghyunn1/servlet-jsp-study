@@ -1,11 +1,14 @@
 package com.nhnacademy.hello.login;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,6 +16,7 @@ import java.util.Objects;
 
 public class LoginServlet extends HttpServlet {
 
+    private static final Logger log = LoggerFactory.getLogger(LoginServlet.class);
     private String initParamId;
     private String initParamPwd;
 
@@ -59,8 +63,11 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("id",id);
             resp.sendRedirect("/login");
         }else{
-//            log.error("아이디/패스워드가 일치하지 않습니다.");
-            resp.sendRedirect("/login.html");
+            log.error("아이디/패스워드가 일치하지 않습니다.");
+//            resp.sendRedirect("/login.html");
+            RequestDispatcher rd = req.getRequestDispatcher("/login.html");
+            rd.forward(req, resp);
+            log.error("id:{}", id);
         }
 
     }
